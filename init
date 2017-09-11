@@ -1,6 +1,7 @@
 #!/bin/bash
 cd
 mkdir projects
+cd projects
 git clone git@github.com:kiltum/dotfiles.git
 cd dotfiles
 ./macos.sh
