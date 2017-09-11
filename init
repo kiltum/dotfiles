@@ -9,3 +9,4 @@ echo "And now a sudo password"
 ./macos.sh
 ./bootstrap.sh
 ./brew.sh
+sudo reboot
