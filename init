@@ -2,8 +2,10 @@
 cd
 mkdir projects
 cd projects
+echo "Here ask password for ssh key"
 git clone git@github.com:kiltum/dotfiles.git
 cd dotfiles
+echo "And now a sudo password"
 ./macos.sh
 ./bootstrap.sh
 ./brew.sh
