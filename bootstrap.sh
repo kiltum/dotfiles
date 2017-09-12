@@ -6,6 +6,8 @@ function doIt() {
 		--exclude "macos.sh" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
+		--exclude "backup.sh" \
+		--exclude "pref" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
