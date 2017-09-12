@@ -42,5 +42,6 @@ fi;
 
 ssh-add -l &>/dev/null
 if [ $? -ne 0 ]; then
+	echo "Need ssh key password"
     ssh-add
 fi

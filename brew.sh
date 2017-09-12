@@ -40,10 +40,8 @@ brew install gnupg
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install grep
-#break .ssh/config usekeychain
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
 
 brew install git
 brew install git-lfs
@@ -60,7 +58,6 @@ brew install tmux
 # ok, now cask
 
 brew cask install sublime-text
-brew cask install 1password
 brew cask install dropbox
 brew cask install gimp
 brew cask install google-chrome
