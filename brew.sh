@@ -54,6 +54,8 @@ brew install tree
 brew install zopfli
 brew install mc
 brew install tmux
+brew install qemu
+brew install ansible
 
 # ok, now cask
 
@@ -63,11 +65,14 @@ brew cask install gimp
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install slack
-brew cask install textual
+# i want icloud sync
+#brew cask install textual
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install vmware-fusion
 brew cask install viscosity
+brew cask install docker
+brew cask install telegram
 
 # Remove outdated versions from the cellar.
 brew cleanup
