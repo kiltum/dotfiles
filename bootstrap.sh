@@ -8,6 +8,7 @@ function doIt() {
 		--exclude "brew.sh" \
 		--exclude "backup.sh" \
 		--exclude "pref" \
+		--exclude "init" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
