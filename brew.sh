@@ -56,6 +56,7 @@ brew install mc
 brew install tmux
 brew install qemu
 brew install ansible
+brew install hugo
 
 # ok, now cask
 
