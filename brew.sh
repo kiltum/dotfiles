@@ -74,6 +74,7 @@ brew cask install vmware-fusion
 brew cask install viscosity
 brew cask install docker
 brew cask install telegram
+brew cask install deezer
 
 # Remove outdated versions from the cellar.
 brew cleanup
