@@ -57,6 +57,7 @@ brew install tmux
 brew install qemu
 brew install ansible
 brew install hugo
+brew install packer
 
 # ok, now cask
 
