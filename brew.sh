@@ -58,6 +58,7 @@ brew install qemu
 brew install ansible
 brew install hugo
 brew install packer
+brew install git-crypt
 
 # ok, now cask
 
@@ -76,6 +77,8 @@ brew cask install viscosity
 brew cask install docker
 brew cask install telegram
 brew cask install deezer
+brew cask install vagrant
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
