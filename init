@@ -4,9 +4,10 @@ mkdir projects
 cd projects
 echo "Install minimal startup packages by homebrew"
 curl https://raw.githubusercontent.com/kiltum/dotfiles/master/brew.sh|bash
-echo "Now grab other useful files"
-git clone git@github.com:kiltum/dotfiles.git
-cd dotfiles
-./macos.sh
-./bootstrap.sh
+echo "Now grab other useful files after restoring ssh keys"
+
+echo git clone git@github.com:kiltum/dotfiles.git
+echo cd dotfiles
+echo ./macos.sh
+echo ./bootstrap.sh
 echo "Now please reboot and have a nice day"
