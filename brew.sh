@@ -76,7 +76,6 @@ brew cask install vmware-fusion
 brew cask install viscosity
 brew cask install docker
 brew cask install telegram
-brew cask install deezer
 brew cask install vagrant
 
 
