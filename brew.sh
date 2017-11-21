@@ -70,13 +70,15 @@ brew cask install iterm2
 brew cask install slack
 # i want icloud sync
 #brew cask install textual
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
+#brew cask install virtualbox
+#brew cask install virtualbox-extension-pack
 brew cask install vmware-fusion
 brew cask install viscosity
 brew cask install docker
 brew cask install telegram
-brew cask install vagrant
+#brew cask install vagrant
+brew cask install timing
+
 
 
 # Remove outdated versions from the cellar.
