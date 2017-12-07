@@ -77,7 +77,7 @@ brew cask install viscosity
 brew cask install docker
 brew cask install telegram
 #brew cask install vagrant
-brew cask install timing
+#brew cask install timing
 
 
 
