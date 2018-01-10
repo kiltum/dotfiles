@@ -66,7 +66,7 @@ brew cask install sublime-text
 brew cask install dropbox
 brew cask install gimp
 brew cask install google-chrome
-brew cask install iterm2
+#brew cask install iterm2
 brew cask install slack
 # i want icloud sync
 #brew cask install textual
