@@ -54,10 +54,10 @@ brew install tree
 brew install zopfli
 brew install mc
 brew install tmux
-brew install qemu
+#brew install qemu
 brew install ansible
-brew install hugo
-brew install packer
+#brew install hugo
+#brew install packer
 brew install git-crypt
 
 # ok, now cask
