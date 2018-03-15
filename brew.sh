@@ -60,6 +60,8 @@ brew install ansible
 #brew install packer
 brew install git-crypt
 
+brew install hetznercloud/tap/hcloud
+
 # ok, now cask
 
 brew cask install sublime-text
@@ -78,8 +80,10 @@ brew cask install docker
 brew cask install telegram
 #brew cask install vagrant
 #brew cask install timing
-
-
+# now time for embedded
+#brew tap PX4/homebrew-px4
+#brew install gcc-arm-none-eabi
+brew cask install gcc-arm-embedded
 
 # Remove outdated versions from the cellar.
 brew cleanup
