@@ -45,15 +45,15 @@ brew install screen
 
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+#brew install imagemagick --with-webp
 brew install p7zip
-brew install pigz
+#brew install pigz
 brew install pv
 brew install ssh-copy-id
 brew install tree
-brew install zopfli
+#brew install zopfli
 brew install mc
-brew install tmux
+#brew install tmux
 #brew install qemu
 brew install ansible
 #brew install hugo
