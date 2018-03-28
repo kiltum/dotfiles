@@ -45,3 +45,11 @@ if [ $? -ne 0 ]; then
 	echo "Need ssh key password"
     ssh-add
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kiltum/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kiltum/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/completion.bash.inc'; fi
+
+if [ -f '/usr/local/bin/aws_completer' ]; then complete -C '/usr/local/bin/aws_completer' aws ; fi

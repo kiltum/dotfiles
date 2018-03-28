@@ -80,6 +80,7 @@ brew cask install telegram
 
 #brew cask install gcc-arm-embedded
 brew cask install highsierramediakeyenabler
+brew cask install bettertouchtool
 
 # Remove outdated versions from the cellar.
 brew cleanup
