@@ -77,6 +77,10 @@ brew cask install telegram
 #brew cask install gcc-arm-embedded
 brew cask install highsierramediakeyenabler
 brew cask install java
+
+brew install socat
+brew cask install xquartz
+
 #brew cask install bettertouchtool
 
 # Remove outdated versions from the cellar.
