@@ -60,6 +60,8 @@ brew install hcloud
 brew install kubectl
 brew install kubernetes-helm
 
+brew install pinentry-mac
+
 # ok, now cask
 
 brew cask install sublime-text
@@ -78,8 +80,9 @@ brew cask install telegram
 brew cask install highsierramediakeyenabler
 brew cask install java
 
-brew install socat
-brew cask install xquartz
+
+#brew install socat
+#brew cask install xquartz
 #open -a XQuartz
 #socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 
