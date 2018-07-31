@@ -80,6 +80,9 @@ brew cask install telegram
 brew cask install highsierramediakeyenabler
 brew cask install java
 
+brew cask install pycharm
+brew cask install goland
+
 
 #brew install socat
 #brew cask install xquartz
