@@ -66,22 +66,22 @@ brew install pinentry-mac
 
 brew cask install sublime-text
 brew cask install dropbox
-brew cask install gimp
+#brew cask install gimp
 brew cask install google-chrome
 
-brew cask install slack
+#brew cask install slack
 
-brew cask install vmware-fusion
+#brew cask install vmware-fusion
 brew cask install viscosity
-brew cask install docker
-brew cask install telegram
+#brew cask install docker
+#brew cask install telegram
 
 #brew cask install gcc-arm-embedded
-brew cask install highsierramediakeyenabler
-brew cask install java
+#brew cask install highsierramediakeyenabler
+#brew cask install java
 
-brew cask install pycharm
-brew cask install goland
+#brew cask install pycharm
+#brew cask install goland
 
 
 #brew install socat
