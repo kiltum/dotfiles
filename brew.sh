@@ -50,24 +50,24 @@ brew install tree
 brew install mc
 #brew install tmux
 #brew install qemu
-brew install ansible
+#brew install ansible
 #brew install hugo
 #brew install packer
 brew install git-crypt
 
 
-brew install hcloud
-brew install kubectl
-brew install kubernetes-helm
+#brew install hcloud
+#brew install kubectl
+#brew install kubernetes-helm
 
 brew install pinentry-mac
 
 # ok, now cask
 
 brew cask install sublime-text
-brew cask install dropbox
+#brew cask install dropbox
 #brew cask install gimp
-brew cask install google-chrome
+#brew cask install google-chrome
 
 #brew cask install slack
 
