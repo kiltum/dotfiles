@@ -27,13 +27,13 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+# brew install wget --with-iri
 
 # Install GnuPG to enable PGP-signing commits.
 brew install gnupg
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
+# brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
@@ -73,6 +73,7 @@ brew cask install sublime-text
 
 #brew cask install vmware-fusion
 brew cask install viscosity
+brew cask install ipvanish-vpn
 #brew cask install docker
 #brew cask install telegram
 
