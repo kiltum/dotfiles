@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-NAME="mbook"
+NAME="micro"
 sudo scutil --set HostName ${NAME}
 sudo scutil --set LocalHostName ${NAME}
 sudo scutil --set ComputerName "${NAME}"
