@@ -15,11 +15,15 @@ brew cask install bitwarden
 brew cask install viscosity
 brew cask install bartender
 
+# GPG
+brew install gnupg
+brew install pinentry-mac
+
 # finish it
 brew cleanup
 
 brew install kubectl
- 
+
 # oh my szh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
