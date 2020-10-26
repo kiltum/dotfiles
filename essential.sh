@@ -9,9 +9,9 @@ sudo -v
 # install essential
 brew install mc
 brew cask install visual-studio-code
-brew cask install slack
+#brew cask install slack
 brew cask install telegram
-brew cask install bitwarden
+#brew cask install bitwarden
 brew cask install viscosity
 brew cask install bartender
 
