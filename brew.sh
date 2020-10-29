@@ -93,5 +93,7 @@ brew cask install viscosity
 
 #brew cask install bettertouchtool
 
+brew cask install ilok-license-manager
+
 # Remove outdated versions from the cellar.
 brew cleanup
