@@ -11,7 +11,7 @@ alias g="git"
 alias gcam="git commit -am "
 alias gp="git push"
 alias gs="git status"
-alias gwip="git commit -am \"-- WIP --\""
+alias gwip="git commit -am \"-- WIP ---\""
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
