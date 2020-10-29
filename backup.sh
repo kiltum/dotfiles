@@ -1,6 +1,6 @@
 #!/bin/bash
 # Simple backup all private files from user directory
-cd
+cd ~
 now=$(date +"%d_%m_%Y")
 tar cvfz /Users/kiltum/Library/Mobile\ Documents/com\~apple\~CloudDocs/backup_${now}.tar.gz .ssh .gnupg .bash* .config .kube .krew
 cd /Users/kiltum/projects/dotfiles
