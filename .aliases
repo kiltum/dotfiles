@@ -4,10 +4,14 @@
 alias ..="cd .."
 
 # Shortcuts
-alias d="cd ~/Dropbox"
+alias d="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias p="cd ~/projects"
 alias g="git"
+alias gcam="git commit -am "
+alias gp="git push"
+alias gs="git status"
+alias gwip="git commit -am \"-- WIP ---\""
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

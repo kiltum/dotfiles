@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install brew
-sudo -v
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#sudo -v
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 
 # Install GNU core utilities (those that come with macOS are outdated).
@@ -64,7 +64,7 @@ brew install pinentry-mac
 
 # ok, now cask
 
-brew cask install sublime-text
+#brew cask install sublime-text
 #brew cask install dropbox
 #brew cask install gimp
 #brew cask install google-chrome
@@ -73,7 +73,7 @@ brew cask install sublime-text
 
 #brew cask install vmware-fusion
 brew cask install viscosity
-brew cask install ipvanish-vpn
+#brew cask install ipvanish-vpn
 #brew cask install docker
 #brew cask install telegram
 
