@@ -2,7 +2,7 @@
 # Install brew
 #sudo -v
 #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -20,11 +20,18 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew install bash-completion2
 
+if [[ "$(uname -m)" == "arm64" ]]; then
 # Switch to using brew-installed bash as default shell
+if ! fgrep -q '/opt/homebrew/bin/bash' /etc/shells; then
+  echo '/opt/homebrew/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /opt/homebrew/bin/bash;
+fi;
+else
 if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
   chsh -s /usr/local/bin/bash;
 fi;
+fi
 
 # Install `wget` with IRI support.
 # brew install wget --with-iri
@@ -72,7 +79,7 @@ brew install pinentry-mac
 #brew cask install slack
 
 #brew cask install vmware-fusion
-brew cask install viscosity
+brew install viscosity
 #brew cask install ipvanish-vpn
 #brew cask install docker
 #brew cask install telegram
@@ -93,7 +100,7 @@ brew cask install viscosity
 
 #brew cask install bettertouchtool
 
-brew cask install ilok-license-manager
+brew install ilok-license-manager
 
 # Remove outdated versions from the cellar.
 brew cleanup

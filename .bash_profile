@@ -2,6 +2,10 @@
 export PATH="$HOME/bin:$PATH";
 export PATH="${PATH}:${HOME}/.krew/bin"
 
+if [[ "$(uname -m)" == "arm64" ]]; then
+  export PATH="/opt/homebrew/bin:${PATH}"
+fi
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
