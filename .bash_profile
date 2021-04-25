@@ -62,6 +62,8 @@ then
   export KUBECONFIG="$DEFAULT_KUBE_CONTEXTS"
 fi
 
+# https://nikgrozev.com/2019/10/03/switch-between-multiple-kubernetes-clusters-with-ease/
+# https://github.com/ahmetb/kubectx
 # Additional contexts should be in ~/.kube/custom-contexts/ 
 CUSTOM_KUBE_CONTEXTS="$HOME/.kube/custom-contexts"
 mkdir -p "${CUSTOM_KUBE_CONTEXTS}"
