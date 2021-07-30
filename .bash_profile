@@ -45,11 +45,6 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
-ssh-add -l &>/dev/null
-if [ $? -ne 0 ]; then
-	echo "Need ssh key password"
-    ssh-add
-fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kiltum/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/path.bash.inc'; fi
@@ -80,3 +75,28 @@ do
 done
 IFS="$OIFS"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOSTNAME-sh
+
+function title()
+{
+   # change the title of the current window or tab
+   echo -ne "\033]0;$*\007"
+}
+
+function ssh()
+{
+   /usr/bin/ssh "$@"
+   # revert the window title after the ssh command
+   title $USER@$HOSTNAME
+}
+
+function su()
+{
+   /bin/su "$@"
+   # revert the window title after the su command
+   title $USER@$HOSTNAME
+}
+
+cd

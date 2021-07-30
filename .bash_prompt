@@ -101,10 +101,12 @@ if [[ "${SSH_TTY}" ]]; then
 else
 	hostStyle="${yellow}";
 fi;
+# Force hostname to be lowered. Useful in WSL
+HN=$(hostname |  tr '[:upper:]' '[:lower:]')
 
 # Set the terminal title and prompt.
 PS1="\[${white}\][\[${userStyle}\]\u"; # username
-PS1+="\[${hostStyle}\]@\h"; # host
+PS1+="\[${hostStyle}\]@${HN}"; # host
 PS1+="\[${white}\] ";
 PS1+="\[${green}\]\W"; # working directory full path
 PS1+="\$(prompt_git \"\[${white}\]|\[${violet}\]\"\"\[${blue}\]\")"; # Git repository details
