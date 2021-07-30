@@ -89,14 +89,22 @@ function ssh()
 {
    /usr/bin/ssh "$@"
    # revert the window title after the ssh command
-   title $USER@$HOSTNAME
+   title $USER@${HOSTNAME,,}
 }
 
 function su()
 {
    /bin/su "$@"
    # revert the window title after the su command
-   title $USER@$HOSTNAME
+   title $USER@${HOSTNAME,,}
 }
 
+function mc()
+{
+   /usr/bin/mc "$@"
+   # revert the window title after the su command
+   title $USER@${HOSTNAME,,}
+}
+
+title $USER@${HOSTNAME,,}
 cd
