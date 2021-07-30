@@ -47,10 +47,10 @@ fi;
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kiltum/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.bash.inc' ]; then source '$HOME/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kiltum/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.bash.inc' ]; then source '$HOME/google-cloud-sdk/completion.bash.inc'; fi
 
 if [ -f '/usr/local/bin/aws_completer' ]; then complete -C '/usr/local/bin/aws_completer' aws ; fi
 
@@ -76,6 +76,7 @@ done
 IFS="$OIFS"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
+## Ubuntu in WSL
 /usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOSTNAME-sh
 
