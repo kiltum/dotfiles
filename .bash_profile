@@ -1,6 +1,7 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 export PATH="${PATH}:/Applications/ARM/bin/"
 if [[ "$(uname -m)" == "arm64" ]]; then
   export PATH="/opt/homebrew/bin:${PATH}"
