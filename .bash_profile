@@ -1,6 +1,7 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 export PATH="${PATH}:/Applications/ARM/bin/"
 if [[ "$(uname -m)" == "arm64" ]]; then
   export PATH="/opt/homebrew/bin:${PATH}"
@@ -45,17 +46,11 @@ fi;
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
-ssh-add -l &>/dev/null
-if [ $? -ne 0 ]; then
-	echo "Need ssh key password"
-    ssh-add
-fi
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kiltum/google-cloud-sdk/path.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.bash.inc' ]; then source '$HOME/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kiltum/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/kiltum/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.bash.inc' ]; then source '$HOME/google-cloud-sdk/completion.bash.inc'; fi
 
 if [ -f '/usr/local/bin/aws_completer' ]; then complete -C '/usr/local/bin/aws_completer' aws ; fi
 
@@ -80,3 +75,52 @@ do
 done
 IFS="$OIFS"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+#/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
+#source $HOME/.keychain/$HOSTNAME-sh
+
+if [ -z "$(pgrep ssh-agent)" ]; then
+   rm -rf /tmp/ssh-*
+   eval $(ssh-agent -s) > /dev/null
+else
+   export SSH_AGENT_PID=$(pgrep ssh-agent)
+   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
+fi
+
+ssh-add -l &>/dev/null
+if [ $? -ne 0 ]; then
+        echo "Need ssh key password"
+    ssh-add
+fi
+
+function title()
+{
+   # change the title of the current window or tab
+   echo -ne "\033]0;$*\007"
+}
+
+function ssh()
+{
+   /usr/bin/ssh "$@"
+   # revert the window title after the ssh command
+   title $USER@${HOSTNAME,,}
+}
+
+function su()
+{
+   /bin/su "$@"
+   # revert the window title after the su command
+   title $USER@${HOSTNAME,,}
+}
+
+function mc()
+{
+   /usr/bin/mc "$@"
+   # revert the window title after the su command
+   title $USER@${HOSTNAME,,}
+}
+
+title $USER@${HOSTNAME,,}
+cd
+GPG_TTY=$(tty)
+export GPG_TTY
