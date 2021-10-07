@@ -124,3 +124,4 @@ title $USER@${HOSTNAME,,}
 cd
 GPG_TTY=$(tty)
 export GPG_TTY
+export EDITOR=mcedit
