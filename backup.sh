@@ -14,6 +14,6 @@ else
     tar cvfz /mnt/c/Users/multi/OneDrive/backup_${now}.tar.gz .ssh .gnupg .bash* .config .kube .krew
     cd /home/kiltum/projects/dotfiles
 fi
-for i in $(ls -a | egrep '^\.'|egrep -v 'git$'|tail -n +3); do cp ~/${i} . ; done
+for i in $(ls -a | egrep '^\.'|egrep -v 'git$'|tail -n +3); do cp -r ~/${i} . ; done
 git commit -am "backup ${now}"
 git push
