@@ -42,6 +42,8 @@ fi;
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
 fi;
+# on fedora
+source /usr/share/bash-completion/completions/git
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
@@ -79,13 +81,13 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 #/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
 #source $HOME/.keychain/$HOSTNAME-sh
 
-if [ -z "$(pgrep ssh-agent)" ]; then
-   rm -rf /tmp/ssh-*
-   eval $(ssh-agent -s) > /dev/null
-else
-   export SSH_AGENT_PID=$(pgrep ssh-agent)
-   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
-fi
+#if [ -z "$(pgrep ssh-agent)" ]; then
+#   rm -rf /tmp/ssh-*
+#   eval $(ssh-agent -s) > /dev/null
+#else
+#   export SSH_AGENT_PID=$(pgrep ssh-agent)
+#   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
+#fi
 
 ssh-add -l &>/dev/null
 if [ $? -ne 0 ]; then
