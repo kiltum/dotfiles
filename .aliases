@@ -13,6 +13,7 @@ alias gcam="git commit -am "
 alias gp="git push"
 alias gs="git status"
 alias gwip="git commit -am \"-- WIP ---\""
+alias gclean="git checkout master && git pull origin master && git fetch -p && git branch -d $(git branch --merged | grep master -v)"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
