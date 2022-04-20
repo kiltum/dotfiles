@@ -81,13 +81,13 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 #/usr/bin/keychain -q --nogui $HOME/.ssh/id_rsa
 #source $HOME/.keychain/$HOSTNAME-sh
 
-#if [ -z "$(pgrep ssh-agent)" ]; then
-#   rm -rf /tmp/ssh-*
-#   eval $(ssh-agent -s) > /dev/null
-#else
-#   export SSH_AGENT_PID=$(pgrep ssh-agent)
-#   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
-#fi
+if [ -z "$(pgrep ssh-agent)" ]; then
+   rm -rf /tmp/ssh-*
+   eval $(ssh-agent -s) > /dev/null
+else
+   export SSH_AGENT_PID=$(pgrep ssh-agent)
+   export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
+fi
 
 ssh-add -l &>/dev/null
 if [ $? -ne 0 ]; then

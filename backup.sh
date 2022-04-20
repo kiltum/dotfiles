@@ -11,10 +11,10 @@ then
     
 else
     echo "We are on WSL"
-    tar cvfz /mnt/c/Users/multi/OneDrive/backup_${now}.tar.gz .ssh .gnupg .bash* .config .kube
+    tar cvfz /mnt/c/Users/multi/OneDrive/backup_${now}.tar.gz --exclude={'.','..'} .*
     cd /home/kiltum/projects/dotfiles
 fi
-for i in $(ls -a | egrep '^\.'|egrep -v 'git$'|tail -n +3); do cp ~/${i} . ; done
+#for i in $(ls -a | egrep '^\.'|egrep -v 'git$'|tail -n +3); do cp ~/${i} . ; done
 cp ~/.ssh/config .ssh/config
-git commit -am "backup ${now}"
-git push
+#git commit -am "backup ${now}"
+#git push
