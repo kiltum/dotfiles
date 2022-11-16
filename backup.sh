@@ -5,9 +5,10 @@ now=$(date +"%d_%m_%Y")
 wsl=$(set|grep WSL|wc -l)
 if [ $wsl -eq "0" ];
 then
+U=$(id -un)
     echo "We are on OS X"
-    tar cvfz /Users/kiltum/Library/Mobile\ Documents/com\~apple\~CloudDocs/backup_${now}.tar.gz .ssh .gnupg .bash* .config .kube 
-    cd /Users/kiltum/projects/dotfiles
+    tar cvfz /Users/${U}/Library/Mobile\ Documents/com\~apple\~CloudDocs/backup_${now}.tar.gz .ssh .gnupg .bash* .config .kube 
+    cd /Users/${U}/projects/dotfiles
     
 else
     echo "We are on WSL"
