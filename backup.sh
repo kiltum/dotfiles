@@ -7,7 +7,7 @@ if [ $wsl -eq "0" ];
 then
 U=$(id -un)
     echo "We are on OS X"
-    tar cvfz /Users/${U}/Library/Mobile\ Documents/com\~apple\~CloudDocs/backup_${now}.tar.gz .ssh .gnupg .bash* .config 
+    tar cvfz /Users/${U}/backup_${now}.tar.gz .ssh .gnupg .bash* .config 
     cd /Users/${U}/projects/dotfiles
     
 else
